@@ -1,1 +1,432 @@
-body {font-size: 50px;}
+@font-face {
+  font-family: "OpenSans Regular";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/OpenSans-Regular.woff")
+    format("woff");
+}
+
+@font-face {
+  font-family: "OpenSans Bold";
+  font-style: Bold;
+  font-weight: 700;
+  src: url("../fonts/OpenSans-Bold.woff")
+    format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-family: "OpenSans bold", sans-serif;
+  text-decoration: none;
+  color: #000;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-family: "OpenSans bold", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+} 
+
+body {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  color: white;
+  font-family: "OpenSans Regular", sans-serif;
+}
+
+
+/* *********************** Шапка сайта *********************** */
+
+.header {
+  padding-top: 28px;
+  margin: 0 auto;
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000;
+  background-image: url("../img/banner-bg.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.header::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 1200px;
+}
+
+.wrp-top {
+  position: relative;
+  z-index: 1;
+}
+
+.heder-top-block {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  
+}
+
+.logo{
+  margin-left: 3px;
+}
+
+.top-menu-list {
+  display: flex;
+  text-transform: uppercase;
+  list-style: none;
+  margin-top: 10px; /* по макету взамен align-items: center; */
+}
+
+.top-menu-list li:not(:first-child) {
+  margin-left: 35px;
+}
+
+.top-menu-list a {
+  text-decoration: none;
+  color: white;
+  font-size: 13px;
+  font-family: "OpenSans Regular", sans-serif;
+}
+.top-menu-list a:hover {
+  color:greenyellow;
+}
+
+.title-one {
+  padding-top: 99px;
+  padding-bottom: 126px;
+  font-family: "OpenSans bold", sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 75px;
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-align: center;
+  width: 720px;
+}
+
+/* *********************** Контент *********************** */
+
+.content-wrapper {
+  display: flex;
+  margin: 65px auto;
+  color: #000;
+}
+
+.main {
+  margin-right: 120px;
+  width: 780px;
+}
+
+/* ********************** Список статей ******************* */
+
+.max-img {
+  display: block;
+}
+
+.article-item {
+  display: flex;
+}
+
+.article-item:not(:last-child) {
+  margin-bottom: 55px;
+}
+
+.article-content {
+  margin-left: 30px;
+  font-size: 15px;
+  line-height: 22px;
+}
+
+.tags {
+  display: flex;
+  margin-top: -6px;
+  margin-bottom: 5px;
+}
+
+.tegs-item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.tegs-item-link {
+  color: #b59f5b;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.tegs-item-link:hover {
+  color:greenyellow;
+}
+
+.article-title {
+  margin-bottom: 26px;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.article-meta {
+  margin-bottom: 42px;
+  color: #888888;
+  font-size: 12px;
+}
+
+.article-autor {
+  font-family: "OpenSans bold", sans-serif;
+  margin-left: 10px;
+}
+.article-autor:hover {
+  color:greenyellow;
+}
+
+.article-text-poragraph:not(:first-child) {
+  margin-top: 16px;
+}
+
+/* *********************** Сайт бар *********************** */
+
+.cite-bar {
+  width: 270px;
+  font-family: "OpenSans bold", sans-serif;
+  /* margin-left: 119px; */
+}
+
+.site-bar-title {
+  margin-bottom: 36px;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+}
+
+.site-bar-title::after {
+  /* margin-bottom: 16px; */
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #e1d9bd;
+  margin: 10px auto 0;
+}
+
+.site-bar-section:not(:last-child) {
+  margin-bottom: 60px;
+}
+
+/* *********************** Новые посты *********************** */
+.new-post-wrp {
+display: flex;
+
+
+}
+
+.new-post-wrp:not(:last-of-type) 
+{
+  margin-bottom: 20px;
+  }
+
+.new-post-img {
+  margin-right: 20px;
+
+}
+
+.new-post-data {
+  display: block;
+  margin-bottom: 5px;
+  color: #888888;
+  font-size: 12px;
+
+}
+
+.new-post-title {
+  font-size: 14px;
+  line-height: 18px;
+}
+/* *********************** Формы ****************************** */
+
+.field {
+  font-size: 13px;
+  height: 47px;
+  background-color: #f4f7f6;
+  border: none;
+  padding: 15px;
+}
+/* *********************** Форма поиска *********************** */
+.search {
+  margin-top: 60px;
+}
+
+.search-field {
+  width: 220px;
+}
+
+.posts-search-button {
+  position: absolute;
+  content: "";
+  color: #000;
+  width: 47px;
+  height: 47px;
+  border: none;
+  background-color: #b59f5b;
+  background-image: url('../svg/search.svg');
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+
+}
+
+/* *********************** Форма рассылки *********************** */
+.mailing-field {
+  width: 100%;
+}
+
+.button {
+  margin-top: 20px;
+  width: 100%;
+  height: 47px;
+  border: none;
+  background-color: #b59f5b;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "OpenSans bold", sans-serif;
+  font-size: 14px;
+  cursor: pointer;
+
+}
+
+/* *********************** Облако тегов *********************** */
+.tegs-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.tegs-list li {
+  border: 3px solid #eeeeee;
+  margin-top: 5px;
+  margin-right: 5px;
+  
+}
+
+.tegs-list-link {
+  display: block;
+  padding: 6px 14px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.tegs-list-link:hover {
+  background-color: green;
+}
+/* *********************** Темы *********************** */
+
+.them-list {
+  font-size: 14px;
+  line-height: 45px;
+}
+
+.them-list li {
+  border-bottom: 1px solid #eeeeee;
+}
+
+.them-list-link:hover {
+  color: green;
+}
+
+.them-list span {
+  color: #c5b585;
+  vertical-align:super;
+}
+
+/* *********************** Футер *********************** */
+
+.footer {
+  padding-bottom: 40px;
+}
+
+.wrp-footer {
+  padding: 0;
+}
+
+.footer-top {
+  background-color: #f4f7f6;
+  padding: 30px 0;
+}
+
+.social-list {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.social-list-item:not(:first-child) {
+  margin-left: 20px;
+}
+
+.social-list-icon {
+  display: block;
+
+  height: 25px;
+  width: 25px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 20px;  
+
+}
+
+.twitter {
+  background-image: url("../svg/004-twitter.svg");
+}
+
+.pinterest {
+  background-image: url("../svg/001-pinterest.svg");
+}
+
+.facebook {
+  background-image: url("../svg/002-facebook-logo.svg");
+}
+
+.instagram {
+  background-image: url("../svg/005-instagram.svg");
+}
+
+.tumblr {
+  background-image: url("../svg/003-tumblr.svg");
+}
+
+.copyright {
+  margin-top: 70px;
+  color: #999999;
+  text-align: center;
+  font-family: "OpenSans bold", sans-serif;
+  font-size: 11px;
+}
+
+
