@@ -190,19 +190,19 @@ padding-top: 50px;
 }
 
 .garden {
-  background-image: url(/img/trend1.jpg);
+  background-image: url(../img/trend1.jpg);
 }
 
 .cheese {
-  background-image: url(/img/trend2.jpg);
+  background-image: url(../img/trend2.jpg);
 }
 
 .mautaince {
-  background-image: url(/img/trend3.jpg);
+  background-image: url(../img/trend3.jpg);
 }
 
 .lemon {
-  background-image: url(/img/trend4.jpg);
+  background-image: url(../img/trend4.jpg);
 }
 
 /* ********************** Список статей ******************* */
