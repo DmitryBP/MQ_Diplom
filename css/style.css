@@ -145,6 +145,66 @@ body {
   width: 780px;
 }
 
+/* *********************** Сейчас в тренде *********************** */
+
+.trends {
+padding-top: 50px;
+}
+
+.trends__border {
+  border: 3px solid #b59f5b;
+  padding: 30px;
+  z-index: 2;
+}
+
+.trends__list {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.trends__item {
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  width: 24.8%;
+  height: 320px;
+  position: relative;
+}
+
+.trends__item::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.trends__item-title {
+  position: relative;
+  font-size: 15px;
+  color:#fff;
+  z-index: 1;
+}
+
+.garden {
+  background-image: url(/img/trend1.jpg);
+}
+
+.cheese {
+  background-image: url(/img/trend2.jpg);
+}
+
+.mautaince {
+  background-image: url(/img/trend3.jpg);
+}
+
+.lemon {
+  background-image: url(/img/trend4.jpg);
+}
+
 /* ********************** Список статей ******************* */
 
 .max-img {
@@ -169,6 +229,8 @@ body {
   display: flex;
   margin-top: -6px;
   margin-bottom: 5px;
+  position: relative;
+  z-index: 2;
 }
 
 .tegs-item:not(:last-child) {
@@ -217,14 +279,15 @@ body {
   /* margin-left: 119px; */
 }
 
-.site-bar-title {
+.section-title {
+  color: #000;
   margin-bottom: 36px;
   text-align: center;
   font-size: 14px;
   position: relative;
 }
 
-.site-bar-title::after {
+.section-title::after {
   /* margin-bottom: 16px; */
   content: "";
   display: block;
@@ -232,6 +295,10 @@ body {
   height: 3px;
   background-color: #e1d9bd;
   margin: 10px auto 0;
+}
+
+.section-title--big {
+  font-size: 20px;
 }
 
 .site-bar-section:not(:last-child) {
