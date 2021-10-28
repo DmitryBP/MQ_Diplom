@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MQ Diplom</title>
   </head>
-  <body>
     <body>
       <header class="header">
         <div class="wrapper wrp-top">
@@ -539,6 +538,26 @@
           <p class="copyright">Copyright © 2009–2019 City Blog LLC.</p>
         </a>
       </footer>
+      <div class="popup">
+          <form class="popup__form">
+              <h2 class="section-title">ваш фидбек</h2>
+              <label>
+                Как часто вы заходите на сайт?
+                  <select name="popup__select" id="">
+                      <option value="почти каждый день" selected>Почти каждый день</option>
+                  </select>
+              </label>
+              <label>
+                  Вы подписаны на 
+                  <input type="radio" name="popup__quetion" value="yas" checked>Да 
+                  <input type="radio" name="popup__quetion" value="no">Нет
+              </label>
+              <label>
+                Расскажите, какой Контент вы хотели бы видеть на нашем сайте?
+                <textarea placeholder="Может, больше рецептов?" rows="10" cols="45" name="text"></textarea>   
+            </label>
+            <button class="button">отправить</button>
+          </form>
+      </div>
     </body>
-  </body>
 </html>

@@ -47,7 +47,7 @@ body {
   display: block;
   width: 100%;
   background-color: #fff;
-  color: white;
+  color: #000;
   font-family: "OpenSans Regular", sans-serif;
 }
 
@@ -131,6 +131,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   width: 720px;
+  color: #fff;
 }
 
 /* *********************** Контент *********************** */
