@@ -579,3 +579,70 @@ display: flex;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* *********************** Попап *********************** */
+
+.popup {
+  border: 1px solid #000;
+  width: 390px;
+  margin: 500px auto;
+  padding: 50px 30px;
+}
+
+
+.section-title--margin-none {
+  margin: 0;
+}
+
+.popup__form {
+}
+
+.popup__hint {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: block;
+  font-size: 13px;
+}
+
+.popup__select {
+  padding: 20px;
+  opacity: 0.53;
+  border:none;
+  border-radius: 0;
+  width: 100%;
+  background-color: #f4f7f6;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+}
+
+.popup__quetion{
+  margin-right: 5px;
+}
+
+.radio-text {
+  margin-right: 30px;
+}
+
+.textarea {
+  width: 100%;
+  height: 130px;
+  resize: none;
+  border:none;
+  padding: 20px;
+  margin-bottom: 10px;
+  background-color: #f4f7f6;
+
+}

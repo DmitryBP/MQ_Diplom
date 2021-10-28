@@ -538,23 +538,34 @@
           <p class="copyright">Copyright © 2009–2019 City Blog LLC.</p>
         </a>
       </footer>
+
+
+
+
+
+
+
+
+
+
       <div class="popup">
           <form class="popup__form">
-              <h2 class="section-title">ваш фидбек</h2>
-              <label>
-                Как часто вы заходите на сайт?
-                  <select name="popup__select" id="">
-                      <option value="почти каждый день" selected>Почти каждый день</option>
-                  </select>
+              <h2 class="section-title section-title--big section-title--margin-none">ваш фидбек</h2>
+              <label class="popup__label">
+                <span class="popup__hint">Как часто вы заходите на сайт?</span> 
+                  <select class="popup__select" name="popup__select" id="">
+                      <option class="popup__option" value="почти каждый день" selected>Почти каждый день</option>
+                      <option class="popup__option" value="каждый день">Каждый день</option>
+                    </select>
               </label>
-              <label>
-                  Вы подписаны на 
-                  <input type="radio" name="popup__quetion" value="yas" checked>Да 
-                  <input type="radio" name="popup__quetion" value="no">Нет
+              <label class="popup__label">
+                <span class="popup__hint">Вы подписаны на e-mail рассылку?</span>
+                  <input class="popup__quetion" type="radio" name="popup__quetion" value="yas" checked><span class="radio-text">Да</span>  
+                  <input class="popup__quetion" type="radio" name="popup__quetion" value="no"><span class="radio-text">Нет</span>
               </label>
-              <label>
-                Расскажите, какой Контент вы хотели бы видеть на нашем сайте?
-                <textarea placeholder="Может, больше рецептов?" rows="10" cols="45" name="text"></textarea>   
+              <label class="popup__label">
+                <span class="popup__hint">Расскажите, какой Контент вы хотели бы видеть на нашем сайте?</span>
+                <textarea class="textarea" placeholder="Может, больше рецептов?" name="text"></textarea>   
             </label>
             <button class="button">отправить</button>
           </form>
