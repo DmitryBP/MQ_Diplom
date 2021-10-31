@@ -2,16 +2,14 @@
   font-family: "OpenSans Regular";
   font-style: normal;
   font-weight: 400;
-  src: url("../fonts/OpenSans-Regular.woff")
-    format("woff");
+  src: url("../fonts/OpenSans-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "OpenSans Bold";
   font-style: Bold;
   font-weight: 700;
-  src: url("../fonts/OpenSans-Bold.woff")
-    format("woff");
+  src: url("../fonts/OpenSans-Bold.woff") format("woff");
 }
 
 * {
@@ -40,12 +38,9 @@ ul {
   height: 1px;
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute;
-} 
+}
 
 body {
-  /* margin: 0 auto; */
-  /* display: block;
-  width: 100%; */
   background-color: #fff;
   color: #000;
   font-family: "OpenSans Regular", sans-serif;
@@ -89,20 +84,11 @@ body {
   justify-content: space-between;
 }
 
-.logo{
-  margin-left: 3px;
-}
-
-.header__nav {
-margin-top: 10px;
-}
-
 .top-menu-list {
-
   display: flex;
   text-transform: uppercase;
   list-style: none;
-  margin-top: 10px; /* по макету взамен align-items: center; */
+  margin-top: 10px;
 }
 
 .top-menu-list li:not(:first-child) {
@@ -116,11 +102,7 @@ margin-top: 10px;
   font-family: "OpenSans Regular", sans-serif;
 }
 .top-menu-list a:hover {
-  color:greenyellow;
-}
-
-.burger {
-  align-items: center;
+  color: greenyellow;
 }
 
 .title-one {
@@ -136,20 +118,66 @@ margin-top: 10px;
   max-width: 720px;
   color: #fff;
 }
-@media(max-width: 786px){
+/* *********************** Шапка сайта - до 360  *********************** */
+@media (max-width: 360px) {
+  .header {
+    padding: 0;
+    background-image: url("../img/banner-mobile.jpg");
+    min-height: 640px;
+
+  }
+
+  .logo {
+    margin: 225px auto 0 ;
+  }
+
+  .logo__img {
+    width: 270px;
+  }
+
+  .burger {
+    position: absolute;
+    right: 16px;
+    top: 30px;
+  }
+
+  .title-one {
+  font-size: 26px;
+  line-height: 36px;
+  padding: 40px 0 0;
+  }
+
   .top-menu-list {
     display: none;
   }
+}
+/* *********************** Шапка сайта - от 360 до 786  *********************** */
+
+@media (min-width: 360px) and (max-width: 785px) {
+  .logo__img {
+    width: 160px;
+  }
+
+  .top-menu-list {
+    display: none;
+  }
+
+  .header__nav {
+    margin-top: 10px;
+  }
+
   .title-one {
-  font-size: 40px;
-  max-width: 620px;
+    font-size: 40px;
+    max-width: 620px;
   }
 }
-
-@media(min-width: 786px){
+/* *********************** Шапка сайта - от 786  *********************** */
+@media (min-width: 786px) {
+  
   .burger {
     display: none;
   }
+
 }
 /* *********************** Контент *********************** */
 
@@ -163,7 +191,8 @@ margin-top: 10px;
 .main {
   border: 1px solid #000;
   margin-right: 120px;
-  min-width: none;width: 780px;
+  min-width: none;
+  width: 780px;
 }
 
 .test {
@@ -172,11 +201,10 @@ margin-top: 10px;
   display: flex;
 }
 
-
 /* *********************** Сейчас в тренде *********************** */
 
 .trends {
-padding-top: 50px;
+  padding-top: 50px;
 }
 
 .trends__border {
@@ -189,7 +217,6 @@ padding-top: 50px;
 .trends__list {
   display: flex;
   justify-content: space-between;
-
 }
 
 .trends__item {
@@ -215,7 +242,7 @@ padding-top: 50px;
 .trends__item-title {
   position: relative;
   font-size: 15px;
-  color:#fff;
+  color: #fff;
   z-index: 1;
 }
 
@@ -276,7 +303,7 @@ padding-top: 50px;
 }
 
 .tegs-item-link:hover {
-  color:greenyellow;
+  color: greenyellow;
 }
 
 .article-title {
@@ -296,7 +323,7 @@ padding-top: 50px;
   margin-left: 10px;
 }
 .article-autor:hover {
-  color:greenyellow;
+  color: greenyellow;
 }
 
 .article-text-poragraph:not(:first-child) {
@@ -333,12 +360,10 @@ padding-top: 50px;
   margin: -40px -25px 30px;
   padding: 40px 20px 30px;
   border: 3px solid #b59f5b;
-
 }
 .card__title {
   font-size: 20px;
   margin-bottom: 20px;
-
 }
 .card__text {
   font-size: 15px;
@@ -356,8 +381,7 @@ padding-top: 50px;
 .card__prace-wrp {
   display: flex;
   flex-direction: column;
-  justify-content:center;
-
+  justify-content: center;
 }
 .card__prise {
   font-family: "OpenSans bold", sans-serif;
@@ -366,7 +390,7 @@ padding-top: 50px;
 
 .card__prise--crossed {
   font-size: 10px;
-  text-decoration:line-through;
+  text-decoration: line-through;
 }
 
 .button--card {
@@ -376,7 +400,7 @@ padding-top: 50px;
   background-color: #b59f5b;
   text-transform: uppercase;
   color: #fff;
-  font-family: "OpenSans bold", sans-serif; 
+  font-family: "OpenSans bold", sans-serif;
   font-size: 14px;
   cursor: pointer;
 }
@@ -416,19 +440,15 @@ padding-top: 50px;
 
 /* *********************** Новые посты *********************** */
 .new-post-wrp {
-display: flex;
-
-
+  display: flex;
 }
 
-.new-post-wrp:not(:last-of-type) 
-{
+.new-post-wrp:not(:last-of-type) {
   margin-bottom: 20px;
-  }
+}
 
 .new-post-img {
   margin-right: 20px;
-
 }
 
 .new-post-data {
@@ -436,7 +456,6 @@ display: flex;
   margin-bottom: 5px;
   color: #888888;
   font-size: 12px;
-
 }
 
 .new-post-title {
@@ -452,7 +471,9 @@ display: flex;
   border: none;
   padding: 15px;
 }
+
 /* *********************** Форма поиска *********************** */
+
 .search {
   margin-top: 60px;
 }
@@ -469,12 +490,11 @@ display: flex;
   height: 47px;
   border: none;
   background-color: #b59f5b;
-  background-image: url('../svg/search.svg');
+  background-image: url("../svg/search.svg");
   background-size: 60%;
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-
 }
 
 /* *********************** Форма рассылки *********************** */
@@ -493,7 +513,6 @@ display: flex;
   font-family: "OpenSans bold", sans-serif;
   font-size: 14px;
   cursor: pointer;
-
 }
 
 /* *********************** Облако тегов *********************** */
@@ -507,7 +526,6 @@ display: flex;
   border: 3px solid #eeeeee;
   margin-top: 5px;
   margin-right: 5px;
-  
 }
 
 .tegs-list-link {
@@ -537,7 +555,7 @@ display: flex;
 
 .them-list span {
   color: #c5b585;
-  vertical-align:super;
+  vertical-align: super;
 }
 
 /* *********************** Футер *********************** */
@@ -573,7 +591,7 @@ display: flex;
   width: 25px;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 20px;  
+  background-size: 20px;
 }
 
 .twitter {
@@ -604,27 +622,17 @@ display: flex;
   font-size: 11px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* *********************** Попап *********************** */
+
+.popup {
+  padding: 50px 30px;
+  background-color: #fff;
+}
 
 .popup__wrp::before {
   position: relative;
   display: block;
-  content: "";  
+  content: "";
   top: -10px;
   left: 370px;
   width: 20px;
@@ -632,32 +640,30 @@ display: flex;
   background-image: url(../svg/form-x.svg);
   background-size: 20px;
   z-index: 5;
-} 
-.popup__wrp {
-  display:none;
-  position: fixed;
-  top:calc(50% - 320px);
-  left:calc(50% - 195px);
-  width: 390px;
-  margin: 0px auto; 
-  z-index: 5;
-} 
-.popup { 
-  padding: 50px 30px;
-  background-color: #fff;
+}
 
+.popup__wrp {
+  /* включить для работы попапа! */
+  display: none;
+  position: fixed;
+  top: calc(50% - 320px);
+  left: calc(50% - 195px);
+  width: 390px;
+  margin: 0px auto;
+  z-index: 5;
 }
 
 .wrapper::before {
+  /* включить для работы попапа! */
   display: none;
-  content:"";
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background-color:rgba(0, 0, 0, 0.2);
-  z-index:4;
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 4;
 }
 
 .section-title--margin-none {
@@ -674,16 +680,16 @@ display: flex;
 .popup__select {
   padding: 20px;
   opacity: 0.53;
-  border:none;
+  border: none;
   border-radius: 0;
   width: 100%;
   background-color: #f4f7f6;
-  -webkit-appearance:none;
-  -moz-appearance:none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   background-image: url(../svg/form-arrows.svg);
   background-size: 20px 20px;
-  background-repeat: no-repeat; 
-  background-position: right 5px center ;
+  background-repeat: no-repeat;
+  background-position: right 5px center;
 }
 
 .radio-text {
@@ -694,9 +700,9 @@ display: flex;
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
-  content: "";  
+  content: "";
   display: inline-block;
- 
+
   width: 20px;
   height: 20px;
 
@@ -706,9 +712,10 @@ display: flex;
 }
 
 .popup__quetion {
-  position:absolute;
-  clip:rect(1px,1px,1px,1px);
-  height:1px;width:1px;
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  width: 1px;
 }
 
 .popup__quetion:checked + .radio-text::before {
@@ -719,9 +726,8 @@ display: flex;
   width: 100%;
   height: 130px;
   resize: none;
-  border:none;
+  border: none;
   padding: 20px;
   margin-bottom: 10px;
   background-color: #f4f7f6;
-
 }
