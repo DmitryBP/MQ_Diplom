@@ -55,8 +55,6 @@ body {
 
 /* ***********************  - до 360  *********************** */
 
-/* Шапка сайта */
-
 @media (max-width: 360px) {
   .header {
     padding: 0;
@@ -319,19 +317,64 @@ body {
 
 /* ********************** Список статей ******************* */
 
-.main {
-  border: 1px solid #000;
-  min-width: none;
-  margin-right: 30px;
-  width: 780px;
+/* ***********************  - до 360  *********************** */
+
+@media (max-width: 360px) {
+
+  .wrapper {
+    margin: 0 15px;
+    padding: 0;
+  }
+
+  .content-wrp {
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .main {
+    width: 100%;
+    
+  }
+
+  .max-img {
+    width: 100%;
+  }
+}
+/* *********************** - от 360 до 786  *********************** */
+
+@media (min-width: 360px) and (max-width: 785px) {
+  .content-wrp {
+    border: 1px solid red;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+  }
+
+  .main {
+    margin-right: 30px;
+    width: 780px;
+  }
 }
 
-.content-wrp {
-  border: 1px solid red;
-  display: flex;
-  /* flex-wrap: wrap; */
-  justify-content: space-between;
+/* ***********************  - от 786  *********************** */
+
+@media (min-width: 786px) {
+  .content-wrp {
+    border: 1px solid red;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+  }
+
+  .main {
+    margin-right: 30px;
+    width: 780px;
+  }
 }
+
+
 
 
 
@@ -380,24 +423,91 @@ body {
 .article-text-poragraph:not(:first-child) {
   margin-top: 16px;
 }
+
+/* *********************** Сайт бар *********************** */
+
+.section-title {
+  color: #000;
+  margin-bottom: 36px;
+  text-align: center;
+  font-size: 14px;
+  position: relative;
+}
+
+.section-title::after {
+  /* margin-bottom: 16px; */
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #e1d9bd;
+  margin: 10px auto 0;
+}
+
+.section-title--big {
+  font-size: 20px;
+}
+
+.site-bar-section:not(:last-child) {
+  margin-bottom: 60px;
+}
+
 /* *********************** Наши изделия *********************** */
 
-.our-products {
-  border: 1px solid red;
-  padding-left: 30px;
-  padding-right: 30px;
+/* ***********************  - до 360  *********************** */
+
+@media (max-width: 360px) {
+  .our-products__list {
+    width: 100%;
+    /* display: flex;
+    flex-wrap: wrap; */
+  }
 }
-.our-products__list {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+/* *********************** - от 360 до 786  *********************** */
+
+@media (min-width: 360px) and (max-width: 785px) {
+  
+  .our-products__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .card__wrp {
+    display: flex;
+    width: 48.27%;
+    min-width: 170px;
+    padding:0 25px;
+  }
+
+  .card__wrp:nth-child(-n+3) {
+    margin-bottom: 30px;
+  }
 }
 
-.card__wrp {
-  border: 1px solid #000;
-  width: 27.5%;
-  padding:0 25px;
+/* ***********************  - от 786  *********************** */
+
+@media (min-width: 786px) {
+
+  .our-products__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
+  .card__wrp {
+    display: flex;
+    width: 29.55%;
+    /* min-width: 255px; */
+    padding:0 25px;
+  }
+
+}
+
+.our-products {
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .card {
@@ -432,7 +542,9 @@ body {
 }
 
 .card__prace-button-wrp {
+  border: 1px solid #000;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
@@ -462,35 +574,7 @@ body {
   font-size: 14px;
   cursor: pointer;
 }
-/* *********************** Сайт бар *********************** */
 
-
-
-.section-title {
-  color: #000;
-  margin-bottom: 36px;
-  text-align: center;
-  font-size: 14px;
-  position: relative;
-}
-
-.section-title::after {
-  /* margin-bottom: 16px; */
-  content: "";
-  display: block;
-  width: 50px;
-  height: 3px;
-  background-color: #e1d9bd;
-  margin: 10px auto 0;
-}
-
-.section-title--big {
-  font-size: 20px;
-}
-
-.site-bar-section:not(:last-child) {
-  margin-bottom: 60px;
-}
 
 /* *********************** Новые посты *********************** */
 .new-post-wrp {
