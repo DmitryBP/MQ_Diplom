@@ -56,11 +56,12 @@ body {
 /* ***********************  - до 360  *********************** */
 
 @media (max-width: 360px) {
+
   .header {
     padding: 0;
     background-image: url("../img/banner-mobile.jpg");
+    background-size: contain;
     min-height: 640px;
-
   }
 
   .logo {
@@ -81,6 +82,7 @@ body {
   font-size: 26px;
   line-height: 36px;
   padding: 40px 0 0;
+
   }
 
   .top-menu-list {
@@ -92,12 +94,41 @@ body {
   .trends__item {
     margin-bottom: 5px;;
   }
+
+  .trends__item-title {
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    z-index: 1;
+  }
+
+/* Список статей */
+
+  .wrapper {
+    margin: 0 15px;
+    padding: 0;
+  }
+
+  .content-wrp {
+    border: 1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .max-img {
+    width: 100%;
+  }
 }
+
 /* *********************** - от 360 до 786  *********************** */
 
-/* Шапка сайта */
 
-@media (min-width: 360px) and (max-width: 785px) {
+@media (min-width: 361px) and (max-width: 785px) {
   .logo__img {
     width: 160px;
   }
@@ -130,18 +161,44 @@ body {
     font-family: "OpenSans bold", sans-serif;
   }
 
-  .main {
-    width: 100%;
+  .trends__item-title {
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    z-index: 1;
   }
 
+  .content-wrp {
+    border: 1px solid red;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
+  }
+
+  .main {
+    margin-right: 30px;
+    width: 780px;
+  }
 }
 
 /* ***********************  - от 786  *********************** */
 
-/* Шапка сайта */
-
 @media (min-width: 786px) {
   
+  .logo__img {
+    width: 170px;
+  }
+
+  .header {
+    padding-top: 28px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #000;
+    background-image: url("../img/banner-bg.jpg");
+    background-size: cover;
+    position: relative;
+  }
+
   .burger {
     display: none;
   }
@@ -157,15 +214,19 @@ body {
     margin-top: 10px;
   }
 
+  .title-one {
+    padding-top: 99px;
+    padding-bottom: 126px;
+    font-size: 45px;
+    line-height: 75px;
+  }
+
   .cite-bar {
     border: 1px solid #000;
     width: 270px;
     font-family: "OpenSans bold", sans-serif;
   }
 
-  .main {
-    width: 780px;
-  }
 
   .max-img {
     border: 1px solid blue;
@@ -189,18 +250,37 @@ body {
     font-size: 15px;
     line-height: 22px;
   }
-}
+
+  .trends__item-title {
+    position: relative;
+    font-size: 16px;
+    color: #fff;
+    z-index: 1;
+  }
+
+    .content-wrp {
+      border: 1px solid red;
+      display: flex;
+      /* flex-wrap: wrap; */
+      justify-content: space-between;
+    }
+  
+    .main {
+      margin-right: 30px;
+      width: 780px;
+    }
+  }
 
 /* *********************** Шапка сайта *********************** */
 
-.header {
-  padding-top: 28px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: #000;
-  background-image: url("../img/banner-bg.jpg");
-  background-size: cover;
-  position: relative;
+.title-one {
+  font-family: "OpenSans bold", sans-serif;
+  font-weight: bold;
+  margin: 0 auto;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 720px;
+  color: #fff;
 }
 
 .header::after {
@@ -233,25 +313,10 @@ body {
   font-size: 13px;
   font-family: "OpenSans Regular", sans-serif;
 }
+
 .top-menu-list a:hover {
   color: greenyellow;
 }
-
-.title-one {
-  padding-top: 99px;
-  padding-bottom: 126px;
-  font-family: "OpenSans bold", sans-serif;
-  font-weight: bold;
-  font-size: 45px;
-  line-height: 75px;
-  margin: 0 auto;
-  text-transform: uppercase;
-  text-align: center;
-  max-width: 720px;
-  color: #fff;
-}
-
-/* *********************** Контент *********************** */
 
 /* *********************** Сейчас в тренде *********************** */
 
@@ -292,13 +357,6 @@ body {
   left: 0;
 }
 
-.trends__item-title {
-  position: relative;
-  font-size: 15px;
-  color: #fff;
-  z-index: 1;
-}
-
 .garden {
   background-image: url(../img/trend1.jpg);
 }
@@ -314,69 +372,6 @@ body {
 .lemon {
   background-image: url(../img/trend4.jpg);
 }
-
-/* ********************** Список статей ******************* */
-
-/* ***********************  - до 360  *********************** */
-
-@media (max-width: 360px) {
-
-  .wrapper {
-    margin: 0 15px;
-    padding: 0;
-  }
-
-  .content-wrp {
-    border: 1px solid red;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .main {
-    width: 100%;
-    
-  }
-
-  .max-img {
-    width: 100%;
-  }
-}
-/* *********************** - от 360 до 786  *********************** */
-
-@media (min-width: 360px) and (max-width: 785px) {
-  .content-wrp {
-    border: 1px solid red;
-    display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: space-between;
-  }
-
-  .main {
-    margin-right: 30px;
-    width: 780px;
-  }
-}
-
-/* ***********************  - от 786  *********************** */
-
-@media (min-width: 786px) {
-  .content-wrp {
-    border: 1px solid red;
-    display: flex;
-    /* flex-wrap: wrap; */
-    justify-content: space-between;
-  }
-
-  .main {
-    margin-right: 30px;
-    width: 780px;
-  }
-}
-
-
-
-
 
 .tags {
   display: flex;
@@ -459,13 +454,11 @@ body {
 @media (max-width: 360px) {
   .our-products__list {
     width: 100%;
-    /* display: flex;
-    flex-wrap: wrap; */
   }
 }
 /* *********************** - от 360 до 786  *********************** */
 
-@media (min-width: 360px) and (max-width: 785px) {
+@media (min-width: 361px) and (max-width: 785px) {
   
   .our-products__list {
     display: flex;
@@ -759,6 +752,19 @@ body {
   font-family: "OpenSans bold", sans-serif;
   font-size: 11px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* *********************** Попап *********************** */
 
