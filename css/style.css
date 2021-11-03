@@ -52,20 +52,26 @@ body {
   max-width: 1200px;
 }
 
-
 /* ***********************  - до 360  *********************** */
 
 @media (max-width: 360px) {
+  .wrapper {
+    margin: 0 15px;
+    padding: 0;
+  }
+
+  /* Шапка */
 
   .header {
     padding: 0;
     background-image: url("../img/banner-mobile.jpg");
-    background-size: contain;
-    min-height: 640px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
   }
 
   .logo {
-    margin: 225px auto 0 ;
+    margin: 225px auto 0;
   }
 
   .logo__img {
@@ -79,20 +85,28 @@ body {
   }
 
   .title-one {
-  font-size: 26px;
-  line-height: 36px;
-  padding: 40px 0 0;
-
+    font-size: 26px;
+    line-height: 36px;
+    padding: 40px 0 0;
   }
 
   .top-menu-list {
     display: none;
   }
 
-/* сейчас в тренде */
+  /* сейчас в тренде */
+
+  .trends {
+    padding-top: 45px;
+  }
+
+  .trends__list {
+    padding-top: 25px;
+  }
 
   .trends__item {
-    margin-bottom: 5px;;
+    margin-bottom: 5px;
+    height: 230px;
   }
 
   .trends__item-title {
@@ -102,15 +116,24 @@ body {
     z-index: 1;
   }
 
-/* Список статей */
+  /* Список статей */
 
-  .wrapper {
-    margin: 0 15px;
-    padding: 0;
+  .article-item:not(:last-child) {
+    margin-bottom: 25px;
+  }
+  .article-list {
+    padding-top: 40px;
+  }
+  .article-content {
+    padding: 15px 0 25px;
+    border-bottom: 3px solid #f7f7f7;
+  }
+
+  .article-text-poragraph {
+    font-size: 14px;
   }
 
   .content-wrp {
-    border: 1px solid red;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -123,10 +146,24 @@ body {
   .max-img {
     width: 100%;
   }
+
+  /* Сайт бар */
+
+  .new-post-container {
+    padding: 30px 0 60px;
+  }
+
+  .our-products__list {
+    padding: 25px 0 45px;
+    width: 100%;
+  }
+
+  .card__wrp {
+    padding-bottom: 25px;
+  }
 }
 
 /* *********************** - от 360 до 786  *********************** */
-
 
 @media (min-width: 361px) and (max-width: 785px) {
   .logo__img {
@@ -146,13 +183,13 @@ body {
     max-width: 620px;
   }
 
-/* сейчас в тренде */
+  /* сейчас в тренде */
 
   .trends__item {
     width: calc(50% - 2.5px);
   }
 
-  .trends__item:nth-child(-n+3) {
+  .trends__item:nth-child(-n + 3) {
     margin-bottom: 5px;
   }
 
@@ -169,7 +206,6 @@ body {
   }
 
   .content-wrp {
-    border: 1px solid red;
     display: flex;
     /* flex-wrap: wrap; */
     justify-content: space-between;
@@ -184,7 +220,6 @@ body {
 /* ***********************  - от 786  *********************** */
 
 @media (min-width: 786px) {
-  
   .logo__img {
     width: 170px;
   }
@@ -203,8 +238,8 @@ body {
     display: none;
   }
 
-.trends__item {
-  width: calc(25% - 2.5px);
+  .trends__item {
+    width: calc(25% - 2.5px);
   }
 
   .top-menu-list {
@@ -222,30 +257,24 @@ body {
   }
 
   .cite-bar {
-    border: 1px solid #000;
     width: 270px;
     font-family: "OpenSans bold", sans-serif;
   }
 
-
   .max-img {
-    border: 1px solid blue;
     display: block;
   }
-  
+
   .article-item {
-    border: 1px solid red;
     display: flex;
     /* flex-wrap: wrap; */
-    
   }
-  
+
   .article-item:not(:last-child) {
     margin-bottom: 55px;
   }
-  
+
   .article-content {
-    border: 1px solid blue;
     margin-left: 30px;
     font-size: 15px;
     line-height: 22px;
@@ -258,18 +287,17 @@ body {
     z-index: 1;
   }
 
-    .content-wrp {
-      border: 1px solid red;
-      display: flex;
-      /* flex-wrap: wrap; */
-      justify-content: space-between;
-    }
-  
-    .main {
-      margin-right: 30px;
-      width: 780px;
-    }
+  .content-wrp {
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-between;
   }
+
+  .main {
+    margin-right: 30px;
+    width: 780px;
+  }
+}
 
 /* *********************** Шапка сайта *********************** */
 
@@ -320,10 +348,6 @@ body {
 
 /* *********************** Сейчас в тренде *********************** */
 
-.trends {
-  padding-top: 50px;
-}
-
 .trends__border {
   width: 100%;
   border: 3px solid #b59f5b;
@@ -341,8 +365,7 @@ body {
   display: flex;
   align-items: flex-end;
   padding: 20px;
-  /* width: calc(25% - 2.5px); */
-  height: 320px;
+  /* height: 320px; */
   position: relative;
   background-size: cover;
 }
@@ -415,22 +438,19 @@ body {
   color: greenyellow;
 }
 
-.article-text-poragraph:not(:first-child) {
-  margin-top: 16px;
-}
-
 /* *********************** Сайт бар *********************** */
 
-.section-title {
+.section__title {
   color: #000;
-  margin-bottom: 36px;
   text-align: center;
-  font-size: 14px;
+  font-size: 20px;
   position: relative;
 }
 
-.section-title::after {
-  /* margin-bottom: 16px; */
+.section__title--mini {
+  font-size: 16px;
+}
+.title-decorate::after {
   content: "";
   display: block;
   width: 50px;
@@ -439,41 +459,22 @@ body {
   margin: 10px auto 0;
 }
 
-.section-title--big {
-  font-size: 20px;
-}
-
-.site-bar-section:not(:last-child) {
-  margin-bottom: 60px;
+.site-bar-section {
+  padding-top: 45px;
 }
 
 /* *********************** Наши изделия *********************** */
 
-/* ***********************  - до 360  *********************** */
-
-@media (max-width: 360px) {
-  .our-products__list {
-    width: 100%;
-  }
-}
 /* *********************** - от 360 до 786  *********************** */
 
 @media (min-width: 361px) and (max-width: 785px) {
-  
   .our-products__list {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
-  .card__wrp {
-    display: flex;
-    width: 48.27%;
-    min-width: 170px;
-    padding:0 25px;
-  }
-
-  .card__wrp:nth-child(-n+3) {
+  .card__wrp:nth-child(-n + 3) {
     margin-bottom: 30px;
   }
 }
@@ -481,7 +482,6 @@ body {
 /* ***********************  - от 786  *********************** */
 
 @media (min-width: 786px) {
-
   .our-products__list {
     display: flex;
     justify-content: space-between;
@@ -493,9 +493,8 @@ body {
     display: flex;
     width: 29.55%;
     /* min-width: 255px; */
-    padding:0 25px;
+    padding: 0 25px;
   }
-
 }
 
 .our-products {
@@ -518,7 +517,7 @@ body {
   height: 100%;
   flex-direction: column;
   position: relative;
-  margin: -40px -25px 30px;
+  margin: -40px -25px 0 -25px;
   padding: 40px 20px 30px;
   border: 3px solid #b59f5b;
 }
@@ -535,7 +534,6 @@ body {
 }
 
 .card__prace-button-wrp {
-  border: 1px solid #000;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -568,7 +566,6 @@ body {
   cursor: pointer;
 }
 
-
 /* *********************** Новые посты *********************** */
 .new-post-wrp {
   display: flex;
@@ -597,28 +594,27 @@ body {
 
 .field {
   font-size: 13px;
-  height: 47px;
+  height: 50px;
   background-color: #f4f7f6;
   border: none;
   padding: 15px;
 }
 
 /* *********************** Форма поиска *********************** */
-
 .search {
-  margin-top: 60px;
+  display: flex;
+  width: 100%;
 }
 
 .search-field {
-  width: 220px;
+  flex-grow: 1;
 }
 
 .posts-search-button {
-  position: absolute;
-  content: "";
+  flex: none;
   color: #000;
-  width: 47px;
-  height: 47px;
+  width: 50px;
+  height: 50px;
   border: none;
   background-color: #b59f5b;
   background-image: url("../svg/search.svg");
@@ -629,6 +625,10 @@ body {
 }
 
 /* *********************** Форма рассылки *********************** */
+.mailing {
+  padding-top: 25px;
+}
+
 .mailing-field {
   width: 100%;
 }
@@ -661,7 +661,7 @@ body {
 
 .tegs-list-link {
   display: block;
-  padding: 6px 14px;
+  padding: 6px 12px;
   text-transform: uppercase;
   font-size: 12px;
 }
@@ -672,6 +672,7 @@ body {
 /* *********************** Темы *********************** */
 
 .them-list {
+  padding: 10px 0 45px;
   font-size: 14px;
   line-height: 45px;
 }
@@ -746,25 +747,12 @@ body {
 }
 
 .copyright {
-  margin-top: 70px;
+  margin-top: 50px;
   color: #999999;
   text-align: center;
   font-family: "OpenSans bold", sans-serif;
   font-size: 11px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* *********************** Попап *********************** */
 

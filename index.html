@@ -44,10 +44,9 @@
       <h1 class="title-one">блог о творчестве, спорте, и образе жизни</h1>
     </div>
   </header>
-  <!-- ********************** Контент ******************* -->
   <!-- ********************** Секция - "сейчас в тренде" ******************* -->
   <section class="trends">
-    <h2 class="section-title section-title--big">сейчас в тренде</h2>
+    <h2 class="section__title title-decorate">сейчас в тренде</h2>
 
     <ul class="trends__list">
 
@@ -284,61 +283,62 @@
       <aside class="cite-bar">
         <!-- /* *********************** Новые посты *********************** */ -->
         <section class="site-bar-section">
-          <h2 class="section-title">Новые посты</h2>
-          <article class="new-post-wrp">
-            <img src="img/2.jpg" alt="фото нотового поста" width="70px" class="new-post-img" />
-            <div class="new-post-content">
-              <time class="new-post-data">14 июля 2019</time>
-              <h2 class="new-post-title">
-                10 мест, ради которых стоит проснуться
-              </h2>
-            </div>
-          </article>
-          <article class="new-post-wrp">
-            <img src="img/151.jpg" alt="фото нотового поста" width="70px" class="new-post-img" />
-            <div class="new-post-content">
-              <time class="new-post-data">14 июля 2019</time>
-              <h2 class="new-post-title">Йога для домашних</h2>
-            </div>
-          </article>
-          <article class="new-post-wrp">
-            <img src="img/45.jpg" alt="фото нотового поста" width="70px" class="new-post-img" />
-            <div class="new-post-content">
-              <time class="new-post-data">14 июля 2019</time>
-              <h2 class="new-post-title">
-                как мы превратили классное место в балкон
-              </h2>
-            </div>
-          </article>
-          <article class="new-post-wrp">
-            <img src="img/501.jpg" alt="фото нотового поста" width="70px" class="new-post-img" />
-            <div class="new-post-content">
-              <time class="new-post-data">14 июля 2019</time>
-              <h2 class="new-post-title">Кулинарный подход к науке</h2>
-            </div>
-          </article>
-          <article class="new-post-wrp">
-            <img src="img/7.jpg" alt="фото нотового поста" width="70px" class="new-post-img" />
-            <div class="new-post-content">
-              <time class="new-post-data">14 июля 2019</time>
-              <h2 class="new-post-title">
-                лучшие прически для распущенных волос
-              </h2>
-            </div>
-          </article>
+          <h2 class="section__title title-decorate section__title--mini">Новые посты</h2>
+          <div class="new-post-container">
+            <article class="new-post-wrp">
+              <img src="img/2.jpg" alt="фото нотового поста" width="70px" class="new-post-img" />
+              <div class="new-post-content">
+                <time class="new-post-data">14 июля 2019</time>
+                <h2 class="new-post-title">
+                  10 мест, ради которых стоит проснуться
+                </h2>
+              </div>
+            </article>
+            <article class="new-post-wrp">
+              <img src="img/151.jpg" alt="фото нотового поста" width="70px" class="new-post-img" />
+              <div class="new-post-content">
+                <time class="new-post-data">14 июля 2019</time>
+                <h2 class="new-post-title">Йога для домашних</h2>
+              </div>
+            </article>
+            <article class="new-post-wrp">
+              <img src="img/45.jpg" alt="фото нотового поста" width="70px" class="new-post-img" />
+              <div class="new-post-content">
+                <time class="new-post-data">14 июля 2019</time>
+                <h2 class="new-post-title">
+                  как мы превратили классное место в балкон
+                </h2>
+              </div>
+            </article>
+            <article class="new-post-wrp">
+              <img src="img/501.jpg" alt="фото нотового поста" width="70px" class="new-post-img" />
+              <div class="new-post-content">
+                <time class="new-post-data">14 июля 2019</time>
+                <h2 class="new-post-title">Кулинарный подход к науке</h2>
+              </div>
+            </article>
+            <article class="new-post-wrp">
+              <img src="img/7.jpg" alt="фото нотового поста" width="70px" class="new-post-img" />
+              <div class="new-post-content">
+                <time class="new-post-data">14 июля 2019</time>
+                <h2 class="new-post-title">
+                  лучшие прически для распущенных волос
+                </h2>
+              </div>
+            </article>
+          </div>
           <!-- /* Форма поиска */ -->
           <form class="search" action="get">
-            <label>
               <input type="text" class="field search-field" placeholder="Найти..." />
-            </label>
-            <button class="posts-search-button" type="submit">
+
+              <button class="posts-search-button" type="submit">
               <span class="visually-hidden">Найти</span>
             </button>
           </form>
         </section>
         <!-- /* *********************** Форма рассылки ********************** */ -->
         <section class="site-bar-section">
-          <h2 class="site-bar-title">Рассылка</h2>
+          <h2 class="section__title section__title--mini title-decorate">Рассылка</h2>
           <form class="mailing" action="get">
             <label>
               <input type="text" class="field mailing-field" placeholder="Ваш email-адрес" />
@@ -348,7 +348,7 @@
         </section>
         <!-- /* *********************** Облако тегов *********************** */ -->
         <section class="site-bar-section">
-          <h2 class="section-title">Теги</h2>
+          <h2 class="section__title section__title--mini title-decorate">Теги</h2>
           <ul class="tegs-list">
             <li><a class="tegs-list-link" href="#0">fashion</a></li>
             <li><a class="tegs-list-link" href="#0">music</a></li>
@@ -357,12 +357,12 @@
             <li><a class="tegs-list-link" href="#0">interlor</a></li>
             <li><a class="tegs-list-link" href="#0">travel</a></li>
             <li><a class="tegs-list-link" href="#0">food</a></li>
-            <li><a class="tegs -list-link" href="#0">health</a></li>
+            <li><a class="tegs-list-link" href="#0">health</a></li>
           </ul>
         </section>
         <!-- /* *********************** Темы *********************** */ -->
         <section class="site-bar-section">
-          <h2 class="site-bar-title">Темы</h2>
+          <h2 class="section__title section__title--mini title-decorate">Темы</h2>
           <ul class="them-list">
             <li>
               <a class="them-list-link" href="#0">Красота</a><span> 12</span>
@@ -389,7 +389,7 @@
   <!-- ******************** Наши продукты ****************** -->
   <section class="our-products wrapper">
 
-    <h2 class="section-title section-title--big">Наши изделия</h2>
+    <h2 class="section__title section__title--mini title-decorate">Наши изделия</h2>
 
     <ul class="our-products__list">
     <div class="card__wrp">
