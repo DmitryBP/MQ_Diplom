@@ -126,7 +126,7 @@ body {
   }
   .article-content {
     padding: 15px 0 25px;
-    border-bottom: 3px solid #f7f7f7;
+    border-bottom: 3px solid #eeeeee;
   }
 
   .article-text-poragraph {
@@ -160,6 +160,8 @@ body {
 
   .card__wrp {
     padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 
@@ -198,7 +200,6 @@ body {
 
   .trends__list {
     padding-top: 25px;
-    height: 245px;
   }
 
   .trends__item {
@@ -211,8 +212,7 @@ body {
   }
 
   .cite-bar {
-    border: 1px solid #000;
-    width: 100%;
+    min-width: 270px;
     font-family: "OpenSans bold", sans-serif;
   }
 
@@ -226,20 +226,47 @@ body {
   /* контент */
 
   .content-wrp {
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     padding: 50px 35px 65px;
+  }
+
+  .main {
+    margin-right: 30px;
+    /* width: 780px; */
   }
 
   .max-img {
     width: 100%;
   }
 
+  .article-item:not(:last-child) {
+    border-bottom: 3px solid #eeeeee;
+    margin-bottom: 40px;
+  }
+
+  .article-content {
+    padding: 15px 0 25px;
+  }
+
+  .new-post-container {
+    padding: 30px 0 60px;
+  }
+
   .our-products__list {
     padding-top: 30px;
     padding-bottom: 65px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
-  .card__wrp:nth-child(-n + 3) {
+  .card__wrp {
+    display: flex;
+    width: calc(50% - 10px);
+    padding: 0 25px;
+  }
+
+  .card__wrp:nth-child(-n + 2) {
     margin-bottom: 30px;
   }
 }
@@ -253,7 +280,7 @@ body {
 
   .header {
     padding-top: 30px;
-    margin-bottom: 60px;
+    margin-bottom: 50px;
     background-repeat: no-repeat;
     background-position: center;
     background-color: #000;
@@ -330,17 +357,14 @@ body {
   }
 
   .our-products__list {
-    padding-top: 30px;
-    padding-bottom: 65px;
+    padding: 30px 25px 65px;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
   }
 
   .card__wrp {
-    display: flex;
+    display: flex; 
     width: 29.55%;
-    padding: 0 25px;
   }
 }
 
@@ -779,46 +803,42 @@ body {
 /* *********************** Попап *********************** */
 
 .popup {
+  /* включить для работы попапа */
+  display: none;
   padding: 50px 30px;
   background-color: #fff;
+  position: fixed;
+  margin: 0px auto;
+  width: 390px;   
 }
 
-.popup__wrp::before {
+.popup::before {
   position: relative;
   display: block;
   content: "";
-  top: -10px;
-  left: 370px;
+  top: -80px;
+  left: 335px;
   width: 20px;
   height: 20px;
   background-image: url(../svg/form-x.svg);
   background-size: 20px;
   z-index: 5;
-}
+} 
 
 .popup__wrp {
-  /* включить для работы попапа! */
-  display: none;
-  position: fixed;
-  top: calc(50% - 320px);
-  left: calc(50% - 195px);
-  width: 390px;
-  margin: 0px auto;
-  z-index: 5;
-}
-
-.wrapper::before {
-  /* включить для работы попапа! */
-  display: none;
-  content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 4;
-}
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  /* включить для работы попапа */
+  display: none;
+}  
 
 .section-title--margin-none {
   margin: 0;
@@ -832,11 +852,12 @@ body {
 }
 
 .popup__select {
+  /* не понял, что нужно исправить */
   padding: 20px;
   opacity: 0.53;
   border: none;
   border-radius: 0;
-  width: 100%;
+  /* width: 100%; */
   background-color: #f4f7f6;
   -webkit-appearance: none;
   -moz-appearance: none;
