@@ -54,7 +54,7 @@ body {
 
 /* ***********************  - до 360  *********************** */
 
-@media (max-width: 360px) {
+@media (max-width: 767px) {
   .wrapper {
     margin: 0 15px;
     padding: 0;
@@ -105,6 +105,7 @@ body {
   }
 
   .trends__item {
+    width: 100%;
     margin-bottom: 5px;
     height: 230px;
   }
@@ -145,6 +146,7 @@ body {
 
   .max-img {
     width: 100%;
+    align-self: flex-start;
   }
 
   /* Сайт бар */
@@ -167,7 +169,7 @@ body {
 
 /* *********************** - от 360 до 786  *********************** */
 
-@media (min-width: 361px) and (max-width: 785px) {
+@media (min-width: 768px) and (max-width: 1199px) {
   .header {
     padding: 40px 0 130px;
     margin-bottom: 50px;
@@ -237,6 +239,7 @@ body {
 
   .max-img {
     width: 100%;
+    align-self: flex-start;
   }
 
   .article-item:not(:last-child) {
@@ -273,7 +276,7 @@ body {
 
 /* ***********************  - от 786  *********************** */
 
-@media (min-width: 786px) {
+@media (min-width: 1200px) {
   .logo__img {
     width: 170px;
   }
@@ -323,6 +326,7 @@ body {
 
   .max-img {
     max-width: 40%;
+    align-self: flex-start;
   }
 
   .article-item {
@@ -816,17 +820,15 @@ body {
   width: 390px;   
 }
 
-.popup::before {
+.popup-x {
   position: relative;
-  display: block;
-  content: "";
-  top: -80px;
-  left: 335px;
+  top: -320px;
+  left: 180px;
   width: 20px;
   height: 20px;
   background-image: url(../svg/form-x.svg);
   background-size: 20px;
-  z-index: 5;
+
 } 
 
 .popup__wrp {
@@ -856,17 +858,16 @@ body {
 }
 
 .popup__select {
-  /* не понял, что нужно исправить */
   padding: 20px;
   opacity: 0.53;
   border: none;
   border-radius: 0;
-  /* width: 100%; */
+  width: 100%;
   background-color: #f4f7f6;
   -webkit-appearance: none;
   -moz-appearance: none;
   background-image: url(../svg/form-arrows.svg);
-  background-size: 20px 20px;
+  background-size: 15px;
   background-repeat: no-repeat;
   background-position: right 5px center;
 }
